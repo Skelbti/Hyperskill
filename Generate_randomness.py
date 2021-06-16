@@ -1,6 +1,5 @@
 import random
 
-
 def ask_string():
     length = 100
     gen_str = []
