@@ -38,12 +38,12 @@ with sqlite3.connect('test.s3db') as conn:
                     age INTEGER,
                     alone INTEGER DEFAULT 0);''')
     
-    add_people(1, 'ALBENGE', 'Paul', 27)
-    add_people(2, 'SOLIER','Claire', 34)
-    n = 'Paul'
+    add_people(1, 'SMITH', 'James', 27)
+    add_people(2, 'JOHNSON','Mike', 34)
+    n = 'James'
     res = cur.execute('''SELECT age + (?) FROM people WHERE surname = (?)''', (10, n))
     res = cur.fetchall()[0][0]
     print(res)
-    res = cur.execute('''SELECT age, alone FROM people WHERE surname = (?)''', ("Claire", ))
+    res = cur.execute('''SELECT age, alone FROM people WHERE surname = (?)''', ("Mike", ))
     res = cur.fetchall()
     print(res[0][1])
