@@ -1,0 +1,76 @@
+body {
+    background: #d5cac1;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Viaoda Libre', cursive;
+    text-align: center;
+}
+
+p {
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+kbd {
+    height: 100px;
+    width: 50px;
+    border-radius:5%;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+}
+
+.white-keys kbd {
+    width: 60px;
+    height: 140px;
+    border: darkslategrey 1px solid;
+    background-color: white;
+    box-shadow: 3px 2px #6a6a6a;
+    font-size: 23px;
+    font-family: 'Aileron', sans-serif;
+    color: #3a3a3a;
+    margin-left: -5px;
+    line-height: 230px;
+    align-content: center;
+
+}
+
+.black-keys kbd {
+    width: 40px;
+    height: 76px;
+    color: white;
+    background-color: black;
+    font-size: 17px;
+    position: relative;
+    line-height: 100px;
+    z-index: 1;
+}
+
+#W {
+    left: -385px;
+}
+
+#E {
+    left: -370px;
+}
+
+#T {
+    left: -293px;
+}
+
+#Y {
+    left: -275px;
+}
+
+#U {
+    left: -260px;
+}
