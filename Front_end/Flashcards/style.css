@@ -1,0 +1,82 @@
+body {
+    margin: auto;
+    background: linear-gradient(rgba(243, 248, 255, 0.99), #dbebff);
+    height: 100vh;
+    font-family: "Montserrat Medium", serif;
+
+}
+
+h1 {
+    color: white;
+    background-color: #007BFF;
+    width: 400px;
+    margin: 20px auto;
+    position: relative;
+    text-align: center;
+    border-radius: 35px;
+    padding: 5px;
+    box-shadow: 2px 2px 3px #888888;
+    z-index: 1;
+}
+
+.container{
+    background-color: #CCE4FF;
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px #ccc;
+    border-radius: 35px;
+    box-shadow: 0px 0px 100px 100px #CCE4FF;
+    perspective: 1000px;
+}
+
+.flashcard{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .5s ease;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px #888888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backface-visibility: hidden;
+}
+
+.front{
+    color: #3F9BFF;
+    background-color: white;
+    z-index: 2;
+    backface-visibility: hidden;
+
+}
+
+.back{
+    color: white;
+    background-color: #3F9BFF;
+    transform: rotateY(180deg);
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+.flashcard:hover{
+    transform: rotateY(180deg);
+}
